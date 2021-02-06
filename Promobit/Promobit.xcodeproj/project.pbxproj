@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AE650D1825CEFF95008C6D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D1725CEFF95008C6D4C /* AppDelegate.swift */; };
-		AE650D1A25CEFF95008C6D4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D1925CEFF95008C6D4C /* SceneDelegate.swift */; };
 		AE650D1C25CEFF95008C6D4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D1B25CEFF95008C6D4C /* ViewController.swift */; };
 		AE650D1F25CEFF95008C6D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE650D1D25CEFF95008C6D4C /* Main.storyboard */; };
 		AE650D2225CEFF95008C6D4C /* Promobit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE650D2025CEFF95008C6D4C /* Promobit.xcdatamodeld */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		AE650D1425CEFF95008C6D4C /* Promobit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promobit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE650D1725CEFF95008C6D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE650D1925CEFF95008C6D4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AE650D1B25CEFF95008C6D4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE650D1E25CEFF95008C6D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE650D2125CEFF95008C6D4C /* Promobit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Promobit.xcdatamodel; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				AE650D1725CEFF95008C6D4C /* AppDelegate.swift */,
-				AE650D1925CEFF95008C6D4C /* SceneDelegate.swift */,
 				AE650D1B25CEFF95008C6D4C /* ViewController.swift */,
 				AE650D1D25CEFF95008C6D4C /* Main.storyboard */,
 				AE650D2325CEFF96008C6D4C /* Assets.xcassets */,
@@ -143,7 +140,6 @@
 				AE650D1C25CEFF95008C6D4C /* ViewController.swift in Sources */,
 				AE650D2225CEFF95008C6D4C /* Promobit.xcdatamodeld in Sources */,
 				AE650D1825CEFF95008C6D4C /* AppDelegate.swift in Sources */,
-				AE650D1A25CEFF95008C6D4C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZFD248T5D;
 				INFOPLIST_FILE = Promobit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZFD248T5D;
 				INFOPLIST_FILE = Promobit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
