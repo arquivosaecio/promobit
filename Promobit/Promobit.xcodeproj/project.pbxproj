@@ -13,6 +13,7 @@
 		AE650D2225CEFF95008C6D4C /* Promobit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE650D2025CEFF95008C6D4C /* Promobit.xcdatamodeld */; };
 		AE650D2425CEFF96008C6D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE650D2325CEFF96008C6D4C /* Assets.xcassets */; };
 		AE650D2725CEFF96008C6D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE650D2525CEFF96008C6D4C /* LaunchScreen.storyboard */; };
+		AE650D3325CF01F5008C6D4C /* UtilAppDelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D3225CF01F5008C6D4C /* UtilAppDelegateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AE650D2325CEFF96008C6D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE650D2625CEFF96008C6D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE650D2825CEFF96008C6D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE650D3225CF01F5008C6D4C /* UtilAppDelegateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilAppDelegateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		AE650D1625CEFF95008C6D4C /* Promobit */ = {
 			isa = PBXGroup;
 			children = (
+				AE650D3125CF01C1008C6D4C /* Util */,
 				AE650D1725CEFF95008C6D4C /* AppDelegate.swift */,
 				AE650D1B25CEFF95008C6D4C /* ViewController.swift */,
 				AE650D1D25CEFF95008C6D4C /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				AE650D2025CEFF95008C6D4C /* Promobit.xcdatamodeld */,
 			);
 			path = Promobit;
+			sourceTree = "<group>";
+		};
+		AE650D3125CF01C1008C6D4C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AE650D3225CF01F5008C6D4C /* UtilAppDelegateViewController.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 				AE650D1C25CEFF95008C6D4C /* ViewController.swift in Sources */,
 				AE650D2225CEFF95008C6D4C /* Promobit.xcdatamodeld in Sources */,
 				AE650D1825CEFF95008C6D4C /* AppDelegate.swift in Sources */,
+				AE650D3325CF01F5008C6D4C /* UtilAppDelegateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
