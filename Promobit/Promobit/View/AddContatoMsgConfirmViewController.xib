@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddContatoMsgConfirmViewController" customModule="Promobit" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="voltarButtonOutlet" destination="WIj-pV-mXr" id="ErF-fg-8Fr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_circle_outline_24_px" translatesAutoresizingMaskIntoConstraints="NO" id="mVl-MI-qYD">
+                    <rect key="frame" x="183" y="212" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="KW0-eZ-s6h"/>
+                        <constraint firstAttribute="height" constant="48" id="ilQ-2w-YvK"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contato adicionado com sucersso" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb3-YK-opm">
+                    <rect key="frame" x="85" y="268" width="244" height="132"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="132" id="TJ1-PR-U50"/>
+                        <constraint firstAttribute="width" constant="244" id="U3N-Vm-q7r"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="34"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIj-pV-mXr">
+                    <rect key="frame" x="24" y="774" width="366" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Rq4-8U-Nmz"/>
+                    </constraints>
+                    <state key="normal" title="VOLTAR">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="voltarButtonAction:" destination="-1" eventType="touchUpInside" id="U0L-Qk-oeP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WIj-pV-mXr" secondAttribute="trailing" constant="24" id="BtU-9C-tDM"/>
+                <constraint firstItem="mVl-MI-qYD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="168" id="Dm4-iE-wuc"/>
+                <constraint firstItem="sb3-YK-opm" firstAttribute="top" secondItem="mVl-MI-qYD" secondAttribute="bottom" constant="8" id="HxD-hE-1ZQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WIj-pV-mXr" secondAttribute="bottom" constant="44" id="QeL-ut-ScF"/>
+                <constraint firstItem="mVl-MI-qYD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QeO-L7-DTy"/>
+                <constraint firstItem="sb3-YK-opm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oV5-bA-3gW"/>
+                <constraint firstItem="WIj-pV-mXr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="sOG-d1-1de"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="106.47321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="check_circle_outline_24_px" width="48" height="48"/>
+    </resources>
+</document>

@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setup Teclado com botões de navegação entre campos de texto
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared().toolbarDoneBarButtonItemText = "OK"
-        let addContatoViewController = AddContatoViewController()
-        window?.rootViewController = addContatoViewController
+        let addContatoMsgConfirmViewController = AddContatoMsgConfirmViewController()
+        window?.rootViewController = addContatoMsgConfirmViewController
         window?.makeKeyAndVisible()
         return true
     }
