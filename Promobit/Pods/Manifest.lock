@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManager (6.5.6)
+  - JMMaskTextField (0.1.0)
+
+DEPENDENCIES:
+  - IQKeyboardManager
+  - JMMaskTextField
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManager
+    - JMMaskTextField
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  JMMaskTextField: ceb969a49a313663a041c6413a0284d921f65ba4
+
+PODFILE CHECKSUM: ea0768424cfc481ba6f41756b799d1f60bd3645f
+
+COCOAPODS: 1.9.3

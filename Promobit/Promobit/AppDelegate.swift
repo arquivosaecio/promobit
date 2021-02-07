@@ -7,14 +7,21 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManager // Teclado com botão próximo e voltar (navegar entre campos de texto)
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Setup Teclado com botões de navegação entre campos de texto
+        IQKeyboardManager.shared().isEnabled = true
+        IQKeyboardManager.shared().toolbarDoneBarButtonItemText = "OK"
+        let addContatoViewController = AddContatoViewController()
+        window?.rootViewController = addContatoViewController
+        window?.makeKeyAndVisible()
         return true
     }
 
