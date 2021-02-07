@@ -13,12 +13,32 @@ import IQKeyboardManager // Teclado com botão próximo e voltar (navegar entre 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var rotas = ROTAS()
+    
+    var contato = Contato()
+    var contatoDao = ContatoDao()
+    var contatoResult = ContatoResult()
+    var contatos = [Contato]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Setup Teclado com botões de navegação entre campos de texto
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared().toolbarDoneBarButtonItemText = "OK"
+        contatoResult = contatoDao.getListaContatos(rota: rotas.GET_CONTATOS)
+        if(contatoResult.executouComSucesso){
+            // Perfeito!!!
+            contatos = contatoResult.contatos
+            print(contatos.count)
+        }else{
+            if(contatoResult.utilInternet.possuiConexao == false){
+                print("Sem internet...")
+            }else{
+                print("Nenhum registro encontrado...")
+            }
+        }
+        
         let nenhumContatoEncontradoViewController = NenhumContatoEncontradoViewController()
         window?.rootViewController = nenhumContatoEncontradoViewController
         window?.makeKeyAndVisible()

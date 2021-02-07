@@ -29,6 +29,8 @@
 		AE650D6C25CFAC84008C6D4C /* AddContatoMsgConfirmViewControllerHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D6B25CFAC84008C6D4C /* AddContatoMsgConfirmViewControllerHandlers.swift */; };
 		AE650D7125CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D6F25CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift */; };
 		AE650D7225CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE650D7025CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib */; };
+		AE650D7525CFB522008C6D4C /* UtilWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D7425CFB522008C6D4C /* UtilWait.swift */; };
+		AE650D7925CFB589008C6D4C /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D7825CFB589008C6D4C /* ContatoDao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		AE650D6B25CFAC84008C6D4C /* AddContatoMsgConfirmViewControllerHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContatoMsgConfirmViewControllerHandlers.swift; sourceTree = "<group>"; };
 		AE650D6F25CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NenhumContatoEncontradoViewController.swift; sourceTree = "<group>"; };
 		AE650D7025CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NenhumContatoEncontradoViewController.xib; sourceTree = "<group>"; };
+		AE650D7425CFB522008C6D4C /* UtilWait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilWait.swift; sourceTree = "<group>"; };
+		AE650D7825CFB589008C6D4C /* ContatoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
 		BA7CB50F433DBF17EA57B8B3 /* Pods_Promobit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promobit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DF5F90A1C6520187E8F171 /* Pods-Promobit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promobit.debug.xcconfig"; path = "Target Support Files/Pods-Promobit/Pods-Promobit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +105,7 @@
 		AE650D1625CEFF95008C6D4C /* Promobit */ = {
 			isa = PBXGroup;
 			children = (
+				AE650D7725CFB56E008C6D4C /* Controller */,
 				AE650D5D25CFA3B6008C6D4C /* Extensions */,
 				AE650D4E25CF94B5008C6D4C /* Fonts */,
 				AE650D4725CF9168008C6D4C /* View */,
@@ -124,6 +129,7 @@
 			children = (
 				AE650D3225CF01F5008C6D4C /* UtilAppDelegateViewController.swift */,
 				AE650D3A25CF09A0008C6D4C /* UtilInternet.swift */,
+				AE650D7425CFB522008C6D4C /* UtilWait.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -181,6 +187,14 @@
 				AE650D5E25CFA3E6008C6D4C /* ExtensionUIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE650D7725CFB56E008C6D4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE650D7825CFB589008C6D4C /* ContatoDao.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D34AE1C6A098FD4A67262F3C /* Pods */ = {
@@ -317,6 +331,7 @@
 				AE650D2225CEFF95008C6D4C /* Promobit.xcdatamodeld in Sources */,
 				AE650D1825CEFF95008C6D4C /* AppDelegate.swift in Sources */,
 				AE650D3F25CF0A8B008C6D4C /* ContatoResult.swift in Sources */,
+				AE650D7925CFB589008C6D4C /* ContatoDao.swift in Sources */,
 				AE650D3825CF0807008C6D4C /* Contato.swift in Sources */,
 				AE650D3B25CF09A0008C6D4C /* UtilInternet.swift in Sources */,
 				AE650D3325CF01F5008C6D4C /* UtilAppDelegateViewController.swift in Sources */,
@@ -324,6 +339,7 @@
 				AE650D5A25CFA2C0008C6D4C /* AddContatoViewControllerHandlers.swift in Sources */,
 				AE650D4425CF0BD4008C6D4C /* ROTAS.swift in Sources */,
 				AE650D5F25CFA3E6008C6D4C /* ExtensionUIColor.swift in Sources */,
+				AE650D7525CFB522008C6D4C /* UtilWait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
