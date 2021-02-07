@@ -27,6 +27,8 @@
 		AE650D6825CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D6625CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.swift */; };
 		AE650D6925CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE650D6725CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.xib */; };
 		AE650D6C25CFAC84008C6D4C /* AddContatoMsgConfirmViewControllerHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D6B25CFAC84008C6D4C /* AddContatoMsgConfirmViewControllerHandlers.swift */; };
+		AE650D7125CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D6F25CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift */; };
+		AE650D7225CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE650D7025CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		AE650D6625CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContatoMsgConfirmViewController.swift; sourceTree = "<group>"; };
 		AE650D6725CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddContatoMsgConfirmViewController.xib; sourceTree = "<group>"; };
 		AE650D6B25CFAC84008C6D4C /* AddContatoMsgConfirmViewControllerHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContatoMsgConfirmViewControllerHandlers.swift; sourceTree = "<group>"; };
+		AE650D6F25CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NenhumContatoEncontradoViewController.swift; sourceTree = "<group>"; };
+		AE650D7025CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NenhumContatoEncontradoViewController.xib; sourceTree = "<group>"; };
 		BA7CB50F433DBF17EA57B8B3 /* Pods_Promobit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promobit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DF5F90A1C6520187E8F171 /* Pods-Promobit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promobit.debug.xcconfig"; path = "Target Support Files/Pods-Promobit/Pods-Promobit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +161,8 @@
 				AE650D6B25CFAC84008C6D4C /* AddContatoMsgConfirmViewControllerHandlers.swift */,
 				AE650D6625CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.swift */,
 				AE650D6725CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.xib */,
+				AE650D6F25CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift */,
+				AE650D7025CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				AE650D2725CEFF96008C6D4C /* LaunchScreen.storyboard in Resources */,
 				AE650D5325CF96C5008C6D4C /* Roboto-Medium.ttf in Resources */,
 				AE650D6925CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.xib in Resources */,
+				AE650D7225CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib in Resources */,
 				AE650D4B25CF917F008C6D4C /* AddContatoViewController.xib in Resources */,
 				AE650D2425CEFF96008C6D4C /* Assets.xcassets in Resources */,
 				AE650D1F25CEFF95008C6D4C /* Main.storyboard in Resources */,
@@ -306,6 +313,7 @@
 				AE650D4A25CF917F008C6D4C /* AddContatoViewController.swift in Sources */,
 				AE650D6C25CFAC84008C6D4C /* AddContatoMsgConfirmViewControllerHandlers.swift in Sources */,
 				AE650D1C25CEFF95008C6D4C /* ViewController.swift in Sources */,
+				AE650D7125CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift in Sources */,
 				AE650D2225CEFF95008C6D4C /* Promobit.xcdatamodeld in Sources */,
 				AE650D1825CEFF95008C6D4C /* AppDelegate.swift in Sources */,
 				AE650D3F25CF0A8B008C6D4C /* ContatoResult.swift in Sources */,
