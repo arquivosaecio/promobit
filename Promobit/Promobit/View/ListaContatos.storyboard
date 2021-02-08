@@ -123,6 +123,10 @@
                             <constraint firstItem="pOt-BJ-Z8a" firstAttribute="bottom" secondItem="GCt-iq-I7k" secondAttribute="bottom" constant="20" id="rFW-JH-kSe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="meusCartoesLabel" destination="TFq-wQ-inc" id="3Pn-BB-mfy"/>
+                        <outlet property="meusContatosLabel" destination="uI8-5P-upi" id="MLn-xk-b5d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZR9-Hn-gFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

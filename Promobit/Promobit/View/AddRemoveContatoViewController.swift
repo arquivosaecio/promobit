@@ -9,9 +9,9 @@
 import UIKit
 import JMMaskTextField // Responsável por colocar mascaras nos campos de texto
 
-class AddContatoViewController: UtilAppDelegateViewController , UITextFieldDelegate{
+class AddRemoveContatoViewController: UtilAppDelegateViewController , UITextFieldDelegate{
     
-    // salvar contato no web-service
+    // atualizar ou excluir lista localmente
     
     @IBOutlet weak var nomeSobrenomeTextField: UITextField!
     @IBOutlet weak var empresaTextField: UITextField!
@@ -26,13 +26,21 @@ class AddContatoViewController: UtilAppDelegateViewController , UITextFieldDeleg
         self.backCancelarHandlers()
     }
     
-    @IBAction func cancelarButtonAction(_ sender: UIButton) {
-        self.backCancelarHandlers()
+    @IBAction func excluirHandlers(_ sender: UIButton) {
+        
+        app.contatos.remove(at: app.contatoIndex)
     }
     
-    @IBAction func salvarButtonAction(_ sender: UIButton) {
-        self.salvarHandlers()
+    @IBAction func atualizarHandlers(_ sender: UIButton) {
+        app.contatos[app.contatoIndex].name = nomeSobrenomeTextField.text!
+        app.contatos[app.contatoIndex].company = empresaTextField.text!
+        app.contatos[app.contatoIndex].email = emailTextField.text!
+        app.contatos[app.contatoIndex].phone = telefoneJMMaskTextField.text!
+        app.contatos[app.contatoIndex].website = siteTextField.text!
+        app.contatos[app.contatoIndex].custom_note = adicionarNotaTextField.text!
     }
+    
+
     
 
     override func viewDidLoad() {

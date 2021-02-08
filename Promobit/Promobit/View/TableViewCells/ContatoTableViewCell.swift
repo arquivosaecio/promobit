@@ -9,6 +9,8 @@ import UIKit
 
 class ContatoTableViewCell: UITableViewCell {
     
+    // celulas individuais
+    
     @IBOutlet weak var fotoPerfilImageView: UIImageView!
     @IBOutlet weak var novoLabel: UILabel!
     @IBOutlet weak var nomeLabel: UILabel!

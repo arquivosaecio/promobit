@@ -22,5 +22,18 @@ class UtilAlerta: NSObject {
         view.present(alertController, animated: true, completion: nil)
         
     }
+    
+    func mensagemComDelay(titulo : String , mensagem : String , view : UIViewController , segundos : Double){
+        
+        let alert = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
+        alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor.white
+        view.present(alert, animated: true, completion: nil)
+        
+        let when = DispatchTime.now() + segundos
+        DispatchQueue.main.asyncAfter(deadline: when){
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
+    }
 
 }

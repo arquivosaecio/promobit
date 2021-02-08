@@ -28,12 +28,22 @@ class CentralListaContatosViewController: UtilAppDelegateViewController , UITabl
     @IBAction func filtroButtonAction(_ sender: Any) {
         print("Filtrando...")
         sortType += 1
-        if(sortType % 2 == 0){
-            // par
+        if(sortType == 1){
+            app.utilAlerta.mensagemComDelay(titulo: "Ordenar por:", mensagem: "Nome", view: self, segundos: 1.0)
             app.contatos.sort { $0.name > $1.name }
         }else{
-            app.contatos.sort { $0.company > $1.company }
+            if(sortType == 2){
+                app.utilAlerta.mensagemComDelay(titulo: "Ordenar por:", mensagem: "Empresa", view: self, segundos: 1.0)
+                app.contatos.sort { $0.company > $1.company }
+            }else{
+                app.utilAlerta.mensagemComDelay(titulo: "Ordenar por:", mensagem: "ID", view: self, segundos: 1.0)
+                app.contatos.sort { $0.id > $1.id }
+            }
         }
+        if(sortType >= 3){
+            sortType = 0
+        }
+            
         contatoTableView.reloadData()
     }
     
@@ -113,6 +123,11 @@ class CentralListaContatosViewController: UtilAppDelegateViewController , UITabl
         app.contatos.insert(movedObject, at: destinationIndexPath.row)
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        app.contatoIndex = indexPath.row
+        let addRemoveContatoViewController = AddRemoveContatoViewController()
+        app.window?.rootViewController = addRemoveContatoViewController
+        app.window?.makeKeyAndVisible()
+    }
 
 }

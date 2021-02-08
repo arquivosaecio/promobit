@@ -40,6 +40,9 @@
 		AE650DF425D1093C008C6D4C /* ContatoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE650DF225D1093C008C6D4C /* ContatoTableViewCell.xib */; };
 		AE650DF825D10F3E008C6D4C /* UtilWebImageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650DF725D10F3E008C6D4C /* UtilWebImageReader.swift */; };
 		AE650DFC25D110FF008C6D4C /* foto.png in Resources */ = {isa = PBXBuildFile; fileRef = AE650DFB25D110FF008C6D4C /* foto.png */; };
+		AE650E0625D165E7008C6D4C /* AddRemoveContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE650E0425D165E6008C6D4C /* AddRemoveContatoViewController.xib */; };
+		AE650E0725D165E7008C6D4C /* AddRemoveContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650E0525D165E7008C6D4C /* AddRemoveContatoViewController.swift */; };
+		AE650E0A25D166F7008C6D4C /* AddRemoveContatoViewControllerHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650E0925D166F7008C6D4C /* AddRemoveContatoViewControllerHandlers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,9 @@
 		AE650DF225D1093C008C6D4C /* ContatoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContatoTableViewCell.xib; sourceTree = "<group>"; };
 		AE650DF725D10F3E008C6D4C /* UtilWebImageReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilWebImageReader.swift; sourceTree = "<group>"; };
 		AE650DFB25D110FF008C6D4C /* foto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foto.png; sourceTree = "<group>"; };
+		AE650E0425D165E6008C6D4C /* AddRemoveContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRemoveContatoViewController.xib; sourceTree = "<group>"; };
+		AE650E0525D165E7008C6D4C /* AddRemoveContatoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRemoveContatoViewController.swift; sourceTree = "<group>"; };
+		AE650E0925D166F7008C6D4C /* AddRemoveContatoViewControllerHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemoveContatoViewControllerHandlers.swift; sourceTree = "<group>"; };
 		BA7CB50F433DBF17EA57B8B3 /* Pods_Promobit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promobit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DF5F90A1C6520187E8F171 /* Pods-Promobit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promobit.debug.xcconfig"; path = "Target Support Files/Pods-Promobit/Pods-Promobit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				AE650DF025D10901008C6D4C /* TableViewCells */,
+				AE650E0925D166F7008C6D4C /* AddRemoveContatoViewControllerHandlers.swift */,
+				AE650E0525D165E7008C6D4C /* AddRemoveContatoViewController.swift */,
+				AE650E0425D165E6008C6D4C /* AddRemoveContatoViewController.xib */,
 				AE650D5925CFA2C0008C6D4C /* AddContatoViewControllerHandlers.swift */,
 				AE650D4825CF917F008C6D4C /* AddContatoViewController.swift */,
 				AE650D4925CF917F008C6D4C /* AddContatoViewController.xib */,
@@ -331,6 +340,7 @@
 				AE650D1F25CEFF95008C6D4C /* Main.storyboard in Resources */,
 				AE650DE425D0F453008C6D4C /* ListaContatos.storyboard in Resources */,
 				AE650DF425D1093C008C6D4C /* ContatoTableViewCell.xib in Resources */,
+				AE650E0625D165E7008C6D4C /* AddRemoveContatoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,12 +399,14 @@
 				AE650D7125CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift in Sources */,
 				AE650D2225CEFF95008C6D4C /* Promobit.xcdatamodeld in Sources */,
 				AE650D1825CEFF95008C6D4C /* AppDelegate.swift in Sources */,
+				AE650E0A25D166F7008C6D4C /* AddRemoveContatoViewControllerHandlers.swift in Sources */,
 				AE650DEA25D0F522008C6D4C /* CentralListaContatosViewController.swift in Sources */,
 				AE650D3F25CF0A8B008C6D4C /* ContatoResult.swift in Sources */,
 				AE650D7925CFB589008C6D4C /* ContatoDao.swift in Sources */,
 				AE650DF825D10F3E008C6D4C /* UtilWebImageReader.swift in Sources */,
 				AE650DF325D1093C008C6D4C /* ContatoTableViewCell.swift in Sources */,
 				AE650D3825CF0807008C6D4C /* Contato.swift in Sources */,
+				AE650E0725D165E7008C6D4C /* AddRemoveContatoViewController.swift in Sources */,
 				AE650DEE25D105A1008C6D4C /* UtilAlerta.swift in Sources */,
 				AE650D3B25CF09A0008C6D4C /* UtilInternet.swift in Sources */,
 				AE650D3325CF01F5008C6D4C /* UtilAppDelegateViewController.swift in Sources */,
