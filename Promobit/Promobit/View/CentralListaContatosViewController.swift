@@ -75,9 +75,13 @@ class CentralListaContatosViewController: UtilAppDelegateViewController , UITabl
     
     override func viewDidAppear(_ animated: Bool) {
         
-        app.contatoResult = app.contatoDao.getListaContatos(rota: app.rotas.GET_CONTATOS)
-        app.utilInternet = app.contatoResult.utilInternet
-        app.contatos = app.contatoResult.contatos
+        if(app.firstRun){
+            app.contatoResult = app.contatoDao.getListaContatos(rota: app.rotas.GET_CONTATOS)
+            app.utilInternet = app.contatoResult.utilInternet
+            app.contatos = app.contatoResult.contatos
+            app.firstRun = false
+        }
+        
         
         activityIndicator.stopAnimating()
         contatoTableView.reloadData()

@@ -30,9 +30,21 @@ class AddRemoveContatoViewController: UtilAppDelegateViewController , UITextFiel
     
     @IBAction func excluirHandlers(_ sender: UIButton) {
         
-        app.contatos.remove(at: app.contatoIndex)
-        app.contatoIndex = -1
-        self.backCancelarHandlers()
+        let alerta = UIAlertController(title: "Exclusão...", message: "Tem certeza que deseja excluir o registro?", preferredStyle: .alert)
+        let simAction = UIAlertAction(title: "Sim", style: .default) { (UIAlertAction) in
+            self.app.contatos.remove(at: self.app.contatoIndex)
+            self.app.contatoIndex = -1
+            self.backCancelarHandlers()
+        }
+        let naoAction = UIAlertAction(title: "Não", style: .default) { (UIAlertAction) in
+            
+        }
+        alerta.addAction(simAction)
+        alerta.addAction(naoAction)
+        alerta.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor.white
+        self.present(alerta, animated: true, completion: nil)
+        
+        
     }
     
     @IBAction func atualizarHandlers(_ sender: UIButton) {

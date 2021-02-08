@@ -31,6 +31,7 @@ extension AddContatoViewController {
         app.contato.website = siteTextField.text!
         app.contato.custom_note = adicionarNotaTextField.text!
         app.contatoResult = app.contatoDao.insertContato(rota: app.rotas.INSERT_CONTATO, contato: app.contato)
+        app.contatos.append(app.contato)
         if(app.contatoResult.executouComSucesso){
             let addContatoMsgConfirmViewController = AddContatoMsgConfirmViewController()
             app.window?.rootViewController = addContatoMsgConfirmViewController
