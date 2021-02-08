@@ -21,12 +21,15 @@ class AddContatoViewController: UtilAppDelegateViewController , UITextFieldDeleg
     @IBOutlet weak var salvarButtonOutlet: UIButton!
     
     @IBAction func backButtonAction(_ sender: UIButton) {
+        self.backCancelarHandlers()
     }
     
     @IBAction func cancelarButtonAction(_ sender: UIButton) {
+        self.backCancelarHandlers()
     }
     
     @IBAction func salvarButtonAction(_ sender: UIButton) {
+        self.salvarHandlers()
     }
     
 
