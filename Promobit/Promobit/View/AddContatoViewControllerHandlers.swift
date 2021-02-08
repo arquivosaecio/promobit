@@ -32,15 +32,9 @@ extension AddContatoViewController {
         app.contato.custom_note = adicionarNotaTextField.text!
         app.contatoResult = app.contatoDao.insertContato(rota: app.rotas.INSERT_CONTATO, contato: app.contato)
         if(app.contatoResult.executouComSucesso){
-            let alerta = UIAlertController(title: "Sucesso!", message: "Contatos salvo!", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
-                UIAlertAction in
-                NSLog("OK")
-                self.backCancelarHandlers()
-            }
-            alerta.addAction(okAction)
-            alerta.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor.white
-            self.present(alerta, animated: true, completion: nil)
+            let addContatoMsgConfirmViewController = AddContatoMsgConfirmViewController()
+            app.window?.rootViewController = addContatoMsgConfirmViewController
+            app.window?.makeKeyAndVisible()
         }else{
             app.utilAlerta.mensagem(titulo: "Erro!", mensagem: "Falha ao salvar o contato, por favor tente novamente mais tarde...", view: self)
         }

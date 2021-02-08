@@ -9,6 +9,8 @@ import UIKit
 
 class CentralListaContatosViewController: UtilAppDelegateViewController , UITableViewDelegate , UITableViewDataSource{
     
+    var sortType = 0
+    
     @IBOutlet weak var menuSanduicheBarButtonItemOutlet: UIBarButtonItem!
     @IBOutlet weak var sadImageOutlet: UIImageView!
     @IBOutlet weak var sadLabelOutlet: UILabel!
@@ -23,6 +25,17 @@ class CentralListaContatosViewController: UtilAppDelegateViewController , UITabl
         app.window?.makeKeyAndVisible()
     }
     
+    @IBAction func filtroButtonAction(_ sender: Any) {
+        print("Filtrando...")
+        sortType += 1
+        if(sortType % 2 == 0){
+            // par
+            app.contatos.sort { $0.name > $1.name }
+        }else{
+            app.contatos.sort { $0.company > $1.company }
+        }
+        contatoTableView.reloadData()
+    }
     
     
     override func viewDidLoad() {
@@ -84,16 +97,7 @@ class CentralListaContatosViewController: UtilAppDelegateViewController , UITabl
         }
         return cell
     }
-    
-    
-    
-//    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-//        return .none
-//    }
-//
-//    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-//        return false
-//    }
+
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none

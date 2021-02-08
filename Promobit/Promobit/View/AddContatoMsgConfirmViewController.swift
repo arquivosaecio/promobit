@@ -13,7 +13,10 @@ class AddContatoMsgConfirmViewController: UtilAppDelegateViewController {
     @IBOutlet weak var voltarButtonOutlet: UIButton!
     
     @IBAction func voltarButtonAction(_ sender: UIButton) {
-        
+        let root = UIStoryboard(name: "ListaContatos", bundle: nil)
+        let rootViewController = root.instantiateViewController(identifier: "ListaContatos")
+        self.app.window?.rootViewController = rootViewController
+        self.app.window?.makeKeyAndVisible()
     }
     
     override func viewDidLoad() {

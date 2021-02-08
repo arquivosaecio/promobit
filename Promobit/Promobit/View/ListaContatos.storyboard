@@ -150,6 +150,11 @@
                                 <items>
                                     <navigationItem title="Meus Contatos" id="3Qq-4L-JGA">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="z8J-5t-M5X"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="filter_list_24_px" id="Q5o-4S-xZN">
+                                            <connections>
+                                                <action selector="filtroButtonAction:" destination="pGO-0u-cEd" id="3jy-DX-RYy"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -252,6 +257,7 @@
     </scenes>
     <resources>
         <image name="arrow_back" width="16" height="16"/>
+        <image name="filter_list_24_px" width="24" height="24"/>
         <image name="menu" width="18" height="12"/>
         <image name="oval" width="70" height="70"/>
         <image name="payment_24_px" width="24" height="24"/>
