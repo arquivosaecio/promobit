@@ -14,6 +14,7 @@ class ROTAS: NSObject {
     
     let HOST = "https://5ff85fad10778b0017043359.mockapi.io"
     var GET_CONTATOS = ""
+    var INSERT_CONTATO = ""
     
     override init() {
         super.init()
@@ -22,6 +23,7 @@ class ROTAS: NSObject {
     
     func getRotas(){
         GET_CONTATOS = HOST + "/api/contatos"
+        INSERT_CONTATO = HOST + "/api/contatos"
     }
 
 }
