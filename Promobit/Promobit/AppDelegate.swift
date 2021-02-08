@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var contatoDao = ContatoDao()
     var contatoResult = ContatoResult()
     var contatos = [Contato]()
+    var utilInternet = UtilInternet()
+    let utilAlerta = UtilAlerta()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -27,20 +29,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared().toolbarDoneBarButtonItemText = "OK"
         
-        contatoResult = contatoDao.insertContato(rota: rotas.INSERT_CONTATO, contato: contato)
+        //contatoResult = contatoDao.insertContato(rota: rotas.INSERT_CONTATO, contato: contato)
         
-        contatoResult = contatoDao.getListaContatos(rota: rotas.GET_CONTATOS)
-        if(contatoResult.executouComSucesso){
-            // Perfeito!!!
-            contatos = contatoResult.contatos
-            print(contatos.count)
-        }else{
-            if(contatoResult.utilInternet.possuiConexao == false){
-                print("Sem internet...")
-            }else{
-                print("Nenhum registro encontrado...")
-            }
-        }
+//        contatoResult = contatoDao.getListaContatos(rota: rotas.GET_CONTATOS)
+//        utilInternet = contatoResult.utilInternet
+//        contatos = contatoResult.contatos
+//        if(contatoResult.executouComSucesso){
+//            // Perfeito!!!
+//            contatos = contatoResult.contatos
+//            print(contatos.count)
+//        }else{
+//            if(contatoResult.utilInternet.possuiConexao == false){
+//                print("Sem internet...")
+//            }else{
+//                print("Nenhum registro encontrado...")
+//            }
+//        }
         
         let root = UIStoryboard(name: "ListaContatos", bundle: nil)
         let rootViewController = root.instantiateViewController(identifier: "ListaContatos")

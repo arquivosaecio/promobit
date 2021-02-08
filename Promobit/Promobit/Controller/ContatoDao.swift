@@ -13,6 +13,7 @@ class ContatoDao: NSObject {
     
     func getListaContatos(rota : String) -> ContatoResult{
         
+        let utilWebImageReader = UtilWebImageReader()
         var locked : Bool = true
         let myUrl = NSURL(string: rota)
         let request = NSMutableURLRequest(url: myUrl! as URL)
@@ -54,6 +55,7 @@ class ContatoDao: NSObject {
                         }
                         if((contatoNSDictionary["avatar"] as? String) != nil){
                             contatoResult.contato.avatar = contatoNSDictionary["avatar"] as! String
+                            contatoResult.contato.fotoUIImage = utilWebImageReader.getImageFromUrl(url: contatoResult.contato.avatar, defaultImage: "fotos.png")
                         }
                         if((contatoNSDictionary["company"] as? String) != nil){
                             contatoResult.contato.company = contatoNSDictionary["company"] as! String
@@ -72,6 +74,7 @@ class ContatoDao: NSObject {
                         }
                         contatoResult.contatos.append(contatoResult.contato)
                     }
+                    contatoResult.contatos[contatoResult.contatos.count - 1].maisNovo = true
                     contatoResult.utilInternet.possuiConexao = true
                     contatoResult.executouComSucesso = true
                     locked = false

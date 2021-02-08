@@ -19,5 +19,7 @@ class Contato: NSObject {
     var phone = ""
     var website = ""
     var custom_note = ""
+    var fotoUIImage : UIImage?
+    var maisNovo = false
 
 }

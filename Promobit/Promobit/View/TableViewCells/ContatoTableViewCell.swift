@@ -8,6 +8,12 @@
 import UIKit
 
 class ContatoTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var fotoPerfilImageView: UIImageView!
+    @IBOutlet weak var novoLabel: UILabel!
+    @IBOutlet weak var nomeLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

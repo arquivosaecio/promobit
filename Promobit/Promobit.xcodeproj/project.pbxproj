@@ -35,6 +35,11 @@
 		AE650DE425D0F453008C6D4C /* ListaContatos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE650DE325D0F453008C6D4C /* ListaContatos.storyboard */; };
 		AE650DE725D0F4F9008C6D4C /* RearListaContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650DE625D0F4F9008C6D4C /* RearListaContatosViewController.swift */; };
 		AE650DEA25D0F522008C6D4C /* CentralListaContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650DE925D0F522008C6D4C /* CentralListaContatosViewController.swift */; };
+		AE650DEE25D105A1008C6D4C /* UtilAlerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650DED25D105A1008C6D4C /* UtilAlerta.swift */; };
+		AE650DF325D1093C008C6D4C /* ContatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650DF125D1093C008C6D4C /* ContatoTableViewCell.swift */; };
+		AE650DF425D1093C008C6D4C /* ContatoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE650DF225D1093C008C6D4C /* ContatoTableViewCell.xib */; };
+		AE650DF825D10F3E008C6D4C /* UtilWebImageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650DF725D10F3E008C6D4C /* UtilWebImageReader.swift */; };
+		AE650DFC25D110FF008C6D4C /* foto.png in Resources */ = {isa = PBXBuildFile; fileRef = AE650DFB25D110FF008C6D4C /* foto.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +75,11 @@
 		AE650DE325D0F453008C6D4C /* ListaContatos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListaContatos.storyboard; sourceTree = "<group>"; };
 		AE650DE625D0F4F9008C6D4C /* RearListaContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RearListaContatosViewController.swift; sourceTree = "<group>"; };
 		AE650DE925D0F522008C6D4C /* CentralListaContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralListaContatosViewController.swift; sourceTree = "<group>"; };
+		AE650DED25D105A1008C6D4C /* UtilAlerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilAlerta.swift; sourceTree = "<group>"; };
+		AE650DF125D1093C008C6D4C /* ContatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewCell.swift; sourceTree = "<group>"; };
+		AE650DF225D1093C008C6D4C /* ContatoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContatoTableViewCell.xib; sourceTree = "<group>"; };
+		AE650DF725D10F3E008C6D4C /* UtilWebImageReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilWebImageReader.swift; sourceTree = "<group>"; };
+		AE650DFB25D110FF008C6D4C /* foto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foto.png; sourceTree = "<group>"; };
 		BA7CB50F433DBF17EA57B8B3 /* Pods_Promobit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promobit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DF5F90A1C6520187E8F171 /* Pods-Promobit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promobit.debug.xcconfig"; path = "Target Support Files/Pods-Promobit/Pods-Promobit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +125,7 @@
 		AE650D1625CEFF95008C6D4C /* Promobit */ = {
 			isa = PBXGroup;
 			children = (
+				AE650DFA25D110AF008C6D4C /* Fotos */,
 				AE650DDD25D0F411008C6D4C /* Legacy */,
 				AE650D7725CFB56E008C6D4C /* Controller */,
 				AE650D5D25CFA3B6008C6D4C /* Extensions */,
@@ -141,6 +152,8 @@
 				AE650D3225CF01F5008C6D4C /* UtilAppDelegateViewController.swift */,
 				AE650D3A25CF09A0008C6D4C /* UtilInternet.swift */,
 				AE650D7425CFB522008C6D4C /* UtilWait.swift */,
+				AE650DED25D105A1008C6D4C /* UtilAlerta.swift */,
+				AE650DF725D10F3E008C6D4C /* UtilWebImageReader.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -172,6 +185,7 @@
 		AE650D4725CF9168008C6D4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AE650DF025D10901008C6D4C /* TableViewCells */,
 				AE650D5925CFA2C0008C6D4C /* AddContatoViewControllerHandlers.swift */,
 				AE650D4825CF917F008C6D4C /* AddContatoViewController.swift */,
 				AE650D4925CF917F008C6D4C /* AddContatoViewController.xib */,
@@ -219,6 +233,23 @@
 				AE650DDE25D0F422008C6D4C /* Promobit-Bridging-Header.h */,
 			);
 			path = Legacy;
+			sourceTree = "<group>";
+		};
+		AE650DF025D10901008C6D4C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				AE650DF125D1093C008C6D4C /* ContatoTableViewCell.swift */,
+				AE650DF225D1093C008C6D4C /* ContatoTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		AE650DFA25D110AF008C6D4C /* Fotos */ = {
+			isa = PBXGroup;
+			children = (
+				AE650DFB25D110FF008C6D4C /* foto.png */,
+			);
+			path = Fotos;
 			sourceTree = "<group>";
 		};
 		D34AE1C6A098FD4A67262F3C /* Pods */ = {
@@ -291,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE650D2725CEFF96008C6D4C /* LaunchScreen.storyboard in Resources */,
+				AE650DFC25D110FF008C6D4C /* foto.png in Resources */,
 				AE650D5325CF96C5008C6D4C /* Roboto-Medium.ttf in Resources */,
 				AE650D6925CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.xib in Resources */,
 				AE650D7225CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib in Resources */,
@@ -298,6 +330,7 @@
 				AE650D2425CEFF96008C6D4C /* Assets.xcassets in Resources */,
 				AE650D1F25CEFF95008C6D4C /* Main.storyboard in Resources */,
 				AE650DE425D0F453008C6D4C /* ListaContatos.storyboard in Resources */,
+				AE650DF425D1093C008C6D4C /* ContatoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +392,10 @@
 				AE650DEA25D0F522008C6D4C /* CentralListaContatosViewController.swift in Sources */,
 				AE650D3F25CF0A8B008C6D4C /* ContatoResult.swift in Sources */,
 				AE650D7925CFB589008C6D4C /* ContatoDao.swift in Sources */,
+				AE650DF825D10F3E008C6D4C /* UtilWebImageReader.swift in Sources */,
+				AE650DF325D1093C008C6D4C /* ContatoTableViewCell.swift in Sources */,
 				AE650D3825CF0807008C6D4C /* Contato.swift in Sources */,
+				AE650DEE25D105A1008C6D4C /* UtilAlerta.swift in Sources */,
 				AE650D3B25CF09A0008C6D4C /* UtilInternet.swift in Sources */,
 				AE650D3325CF01F5008C6D4C /* UtilAppDelegateViewController.swift in Sources */,
 				AE650DE125D0F423008C6D4C /* SWRevealViewController.m in Sources */,

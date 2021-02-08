@@ -153,22 +153,82 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad" translatesAutoresizingMaskIntoConstraints="NO" id="ue9-gp-icD">
+                                <rect key="frame" x="177" y="374" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Sqe-1S-dwJ"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você ainda não possui contatos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnz-88-JyM">
+                                <rect key="frame" x="92" y="458" width="230" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="9XV-Ub-DXH"/>
+                                    <constraint firstAttribute="width" constant="230" id="Fub-Lz-EV6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JOl-Mk-xRl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhe-ka-AkF">
+                                <rect key="frame" x="342" y="758" width="56" height="56"/>
+                                <color key="backgroundColor" red="0.0" green="0.33725490200000002" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="ZHp-Df-U3Q"/>
+                                    <constraint firstAttribute="width" constant="56" id="ha1-yu-Zak"/>
+                                </constraints>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="pGO-0u-cEd" eventType="touchUpInside" id="Ecf-v3-nMD"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="dNC-ms-gO7">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="Pws-qT-YMg"/>
+                                    <constraint firstAttribute="height" constant="37" id="XpU-Ox-fVT"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yvy-Rc-Zfm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dNC-ms-gO7" firstAttribute="centerX" secondItem="x2e-Ic-br7" secondAttribute="centerX" id="1Uh-EJ-NSA"/>
+                            <constraint firstAttribute="trailing" secondItem="Rhe-ka-AkF" secondAttribute="trailing" constant="16" id="1zt-eh-qvm"/>
+                            <constraint firstItem="dNC-ms-gO7" firstAttribute="centerY" secondItem="x2e-Ic-br7" secondAttribute="centerY" id="ITe-Go-Wkg"/>
+                            <constraint firstItem="pnz-88-JyM" firstAttribute="centerX" secondItem="x2e-Ic-br7" secondAttribute="centerX" id="Ilx-ZN-h3U"/>
                             <constraint firstItem="M2Z-MH-39Z" firstAttribute="top" secondItem="yvy-Rc-Zfm" secondAttribute="top" id="WCh-k5-Srk"/>
+                            <constraint firstItem="yvy-Rc-Zfm" firstAttribute="bottom" secondItem="Rhe-ka-AkF" secondAttribute="bottom" constant="48" id="YL9-t2-Sxk"/>
+                            <constraint firstItem="ue9-gp-icD" firstAttribute="top" secondItem="M2Z-MH-39Z" secondAttribute="bottom" constant="286" id="dGQ-bv-Myf"/>
                             <constraint firstAttribute="trailing" secondItem="M2Z-MH-39Z" secondAttribute="trailing" id="iSs-ZQ-Nob"/>
                             <constraint firstItem="M2Z-MH-39Z" firstAttribute="leading" secondItem="x2e-Ic-br7" secondAttribute="leading" id="qAr-Rx-PdL"/>
+                            <constraint firstItem="pnz-88-JyM" firstAttribute="top" secondItem="ue9-gp-icD" secondAttribute="bottom" constant="24" id="sR0-mx-pX0"/>
+                            <constraint firstItem="ue9-gp-icD" firstAttribute="centerX" secondItem="x2e-Ic-br7" secondAttribute="centerX" id="ufc-Oc-zm8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="dNC-ms-gO7" id="kAq-ya-SE1"/>
+                        <outlet property="addButtonOutlet" destination="Rhe-ka-AkF" id="ct1-8H-xLh"/>
+                        <outlet property="contatoTableView" destination="JOl-Mk-xRl" id="X6i-xz-HkR"/>
                         <outlet property="menuSanduicheBarButtonItemOutlet" destination="z8J-5t-M5X" id="xTH-Cy-TtJ"/>
+                        <outlet property="sadImageOutlet" destination="ue9-gp-icD" id="e9p-Uf-02T"/>
+                        <outlet property="sadLabelOutlet" destination="pnz-88-JyM" id="msv-wF-CRq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URv-2a-NdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="915"/>
+            <point key="canvasLocation" x="660.86956521739137" y="914.73214285714278"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="8B8-Eq-ehI">
@@ -195,6 +255,7 @@
         <image name="menu" width="18" height="12"/>
         <image name="oval" width="70" height="70"/>
         <image name="payment_24_px" width="24" height="24"/>
+        <image name="sad" width="60" height="60"/>
         <image name="supervised_user_circle_24_px" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
