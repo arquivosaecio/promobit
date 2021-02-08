@@ -42,9 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        let nenhumContatoEncontradoViewController = NenhumContatoEncontradoViewController()
-        window?.rootViewController = nenhumContatoEncontradoViewController
+        let root = UIStoryboard(name: "ListaContatos", bundle: nil)
+        let rootViewController = root.instantiateViewController(identifier: "ListaContatos")
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
+        
+//        let nenhumContatoEncontradoViewController = NenhumContatoEncontradoViewController()
+//        window?.rootViewController = nenhumContatoEncontradoViewController
+//        window?.makeKeyAndVisible()
         return true
     }
 

@@ -31,6 +31,10 @@
 		AE650D7225CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE650D7025CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib */; };
 		AE650D7525CFB522008C6D4C /* UtilWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D7425CFB522008C6D4C /* UtilWait.swift */; };
 		AE650D7925CFB589008C6D4C /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650D7825CFB589008C6D4C /* ContatoDao.swift */; };
+		AE650DE125D0F423008C6D4C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE650DE025D0F423008C6D4C /* SWRevealViewController.m */; };
+		AE650DE425D0F453008C6D4C /* ListaContatos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE650DE325D0F453008C6D4C /* ListaContatos.storyboard */; };
+		AE650DE725D0F4F9008C6D4C /* RearListaContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650DE625D0F4F9008C6D4C /* RearListaContatosViewController.swift */; };
+		AE650DEA25D0F522008C6D4C /* CentralListaContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE650DE925D0F522008C6D4C /* CentralListaContatosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,12 @@
 		AE650D7025CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NenhumContatoEncontradoViewController.xib; sourceTree = "<group>"; };
 		AE650D7425CFB522008C6D4C /* UtilWait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilWait.swift; sourceTree = "<group>"; };
 		AE650D7825CFB589008C6D4C /* ContatoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
+		AE650DDE25D0F422008C6D4C /* Promobit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Promobit-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE650DDF25D0F422008C6D4C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		AE650DE025D0F423008C6D4C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		AE650DE325D0F453008C6D4C /* ListaContatos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListaContatos.storyboard; sourceTree = "<group>"; };
+		AE650DE625D0F4F9008C6D4C /* RearListaContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RearListaContatosViewController.swift; sourceTree = "<group>"; };
+		AE650DE925D0F522008C6D4C /* CentralListaContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralListaContatosViewController.swift; sourceTree = "<group>"; };
 		BA7CB50F433DBF17EA57B8B3 /* Pods_Promobit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promobit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DF5F90A1C6520187E8F171 /* Pods-Promobit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promobit.debug.xcconfig"; path = "Target Support Files/Pods-Promobit/Pods-Promobit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +115,7 @@
 		AE650D1625CEFF95008C6D4C /* Promobit */ = {
 			isa = PBXGroup;
 			children = (
+				AE650DDD25D0F411008C6D4C /* Legacy */,
 				AE650D7725CFB56E008C6D4C /* Controller */,
 				AE650D5D25CFA3B6008C6D4C /* Extensions */,
 				AE650D4E25CF94B5008C6D4C /* Fonts */,
@@ -169,6 +180,9 @@
 				AE650D6725CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.xib */,
 				AE650D6F25CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift */,
 				AE650D7025CFAE86008C6D4C /* NenhumContatoEncontradoViewController.xib */,
+				AE650DE325D0F453008C6D4C /* ListaContatos.storyboard */,
+				AE650DE625D0F4F9008C6D4C /* RearListaContatosViewController.swift */,
+				AE650DE925D0F522008C6D4C /* CentralListaContatosViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +209,16 @@
 				AE650D7825CFB589008C6D4C /* ContatoDao.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE650DDD25D0F411008C6D4C /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				AE650DDF25D0F422008C6D4C /* SWRevealViewController.h */,
+				AE650DE025D0F423008C6D4C /* SWRevealViewController.m */,
+				AE650DDE25D0F422008C6D4C /* Promobit-Bridging-Header.h */,
+			);
+			path = Legacy;
 			sourceTree = "<group>";
 		};
 		D34AE1C6A098FD4A67262F3C /* Pods */ = {
@@ -239,6 +263,7 @@
 				TargetAttributes = {
 					AE650D1325CEFF95008C6D4C = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -272,6 +297,7 @@
 				AE650D4B25CF917F008C6D4C /* AddContatoViewController.xib in Resources */,
 				AE650D2425CEFF96008C6D4C /* Assets.xcassets in Resources */,
 				AE650D1F25CEFF95008C6D4C /* Main.storyboard in Resources */,
+				AE650DE425D0F453008C6D4C /* ListaContatos.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,16 +356,19 @@
 				AE650D7125CFAE86008C6D4C /* NenhumContatoEncontradoViewController.swift in Sources */,
 				AE650D2225CEFF95008C6D4C /* Promobit.xcdatamodeld in Sources */,
 				AE650D1825CEFF95008C6D4C /* AppDelegate.swift in Sources */,
+				AE650DEA25D0F522008C6D4C /* CentralListaContatosViewController.swift in Sources */,
 				AE650D3F25CF0A8B008C6D4C /* ContatoResult.swift in Sources */,
 				AE650D7925CFB589008C6D4C /* ContatoDao.swift in Sources */,
 				AE650D3825CF0807008C6D4C /* Contato.swift in Sources */,
 				AE650D3B25CF09A0008C6D4C /* UtilInternet.swift in Sources */,
 				AE650D3325CF01F5008C6D4C /* UtilAppDelegateViewController.swift in Sources */,
+				AE650DE125D0F423008C6D4C /* SWRevealViewController.m in Sources */,
 				AE650D6825CFA9CB008C6D4C /* AddContatoMsgConfirmViewController.swift in Sources */,
 				AE650D5A25CFA2C0008C6D4C /* AddContatoViewControllerHandlers.swift in Sources */,
 				AE650D4425CF0BD4008C6D4C /* ROTAS.swift in Sources */,
 				AE650D5F25CFA3E6008C6D4C /* ExtensionUIColor.swift in Sources */,
 				AE650D7525CFB522008C6D4C /* UtilWait.swift in Sources */,
+				AE650DE725D0F4F9008C6D4C /* RearListaContatosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,16 +516,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZFD248T5D;
 				INFOPLIST_FILE = Promobit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = professoraecio.Promobit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Promobit/Legacy/Promobit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,16 +540,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZFD248T5D;
 				INFOPLIST_FILE = Promobit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = professoraecio.Promobit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Promobit/Legacy/Promobit-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
