@@ -21,23 +21,33 @@ class AddRemoveContatoViewController: UtilAppDelegateViewController , UITextFiel
     @IBOutlet weak var adicionarNotaTextField: UITextField!
     @IBOutlet weak var cancelarButtonOutlet: UIButton!
     @IBOutlet weak var salvarButtonOutlet: UIButton!
+    @IBOutlet weak var excluirButtonOutlet: UIButton!
     
     @IBAction func backButtonAction(_ sender: UIButton) {
+        app.contatoIndex = -1
         self.backCancelarHandlers()
     }
     
     @IBAction func excluirHandlers(_ sender: UIButton) {
         
         app.contatos.remove(at: app.contatoIndex)
+        app.contatoIndex = -1
+        self.backCancelarHandlers()
     }
     
     @IBAction func atualizarHandlers(_ sender: UIButton) {
+        
         app.contatos[app.contatoIndex].name = nomeSobrenomeTextField.text!
         app.contatos[app.contatoIndex].company = empresaTextField.text!
         app.contatos[app.contatoIndex].email = emailTextField.text!
         app.contatos[app.contatoIndex].phone = telefoneJMMaskTextField.text!
         app.contatos[app.contatoIndex].website = siteTextField.text!
         app.contatos[app.contatoIndex].custom_note = adicionarNotaTextField.text!
+        app.contatoIndex = -1
+        let root = UIStoryboard(name: "ListaContatos", bundle: nil)
+        let rootViewController = root.instantiateViewController(identifier: "ListaContatos")
+        self.app.window?.rootViewController = rootViewController
+        self.app.window?.makeKeyAndVisible()
     }
     
 

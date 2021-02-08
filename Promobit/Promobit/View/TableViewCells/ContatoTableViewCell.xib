@@ -29,15 +29,6 @@
                             <constraint firstAttribute="width" constant="40" id="pLR-SH-Kez"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HN0-9a-i33">
-                        <rect key="frame" x="64" y="8" width="171" height="19"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="19" id="ObZ-0R-wi7"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
-                        <color key="textColor" red="0.10588235294117647" green="0.37254901960784315" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfG-fC-KY5">
                         <rect key="frame" x="243" y="16" width="57" height="24"/>
                         <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -58,34 +49,43 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R2-Pa-PCl">
                         <rect key="frame" x="64" y="27" width="171" height="24"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="Xj4-cJ-lkI"/>
+                            <constraint firstAttribute="height" constant="24" id="KlE-FJ-D5R"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
                         <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-i9-ZMQ">
+                        <rect key="frame" x="64" y="8" width="171" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="flH-mW-IkA"/>
+                        </constraints>
+                        <state key="normal" title="Nome">
+                            <color key="titleColor" red="0.1058823529" green="0.37254901959999998" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="QfG-fC-KY5" firstAttribute="leading" secondItem="HN0-9a-i33" secondAttribute="trailing" constant="8" id="3M1-wL-IlY"/>
-                    <constraint firstItem="HN0-9a-i33" firstAttribute="leading" secondItem="bWb-3K-mel" secondAttribute="trailing" constant="8" id="75K-C4-DRn"/>
                     <constraint firstItem="QfG-fC-KY5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="8nk-WI-3ct"/>
+                    <constraint firstItem="QfG-fC-KY5" firstAttribute="leading" secondItem="3R2-Pa-PCl" secondAttribute="trailing" constant="8" id="9Nx-8n-T4n"/>
+                    <constraint firstItem="Td9-i9-ZMQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="AUt-E2-Tyt"/>
                     <constraint firstAttribute="trailing" secondItem="QfG-fC-KY5" secondAttribute="trailing" constant="20" id="CHo-kP-Zga"/>
+                    <constraint firstItem="3R2-Pa-PCl" firstAttribute="top" secondItem="Td9-i9-ZMQ" secondAttribute="bottom" id="J3T-5M-rei"/>
                     <constraint firstItem="bWb-3K-mel" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="JHS-jy-rJS"/>
-                    <constraint firstItem="3R2-Pa-PCl" firstAttribute="top" secondItem="HN0-9a-i33" secondAttribute="bottom" id="LKp-QN-hnP"/>
+                    <constraint firstItem="3R2-Pa-PCl" firstAttribute="leading" secondItem="bWb-3K-mel" secondAttribute="trailing" constant="8" id="SC8-sf-HGa"/>
                     <constraint firstItem="bWb-3K-mel" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bhR-0J-6XE"/>
-                    <constraint firstItem="QfG-fC-KY5" firstAttribute="leading" secondItem="3R2-Pa-PCl" secondAttribute="trailing" constant="8" id="lnT-Mr-XG0"/>
-                    <constraint firstItem="HN0-9a-i33" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="taU-Bo-I2i"/>
-                    <constraint firstItem="3R2-Pa-PCl" firstAttribute="leading" secondItem="bWb-3K-mel" secondAttribute="trailing" constant="8" id="wYt-Cg-dLF"/>
+                    <constraint firstItem="Td9-i9-ZMQ" firstAttribute="leading" secondItem="bWb-3K-mel" secondAttribute="trailing" constant="8" id="cKN-qS-s4E"/>
+                    <constraint firstItem="QfG-fC-KY5" firstAttribute="leading" secondItem="Td9-i9-ZMQ" secondAttribute="trailing" constant="8" id="viF-45-OeE"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="companyLabel" destination="3R2-Pa-PCl" id="SZQ-do-wTA"/>
                 <outlet property="fotoPerfilImageView" destination="bWb-3K-mel" id="85X-XJ-QpR"/>
-                <outlet property="nomeLabel" destination="HN0-9a-i33" id="8lp-RM-FlZ"/>
+                <outlet property="nomeLabel" destination="Td9-i9-ZMQ" id="gr2-eU-ClD"/>
                 <outlet property="novoLabel" destination="QfG-fC-KY5" id="0dX-7d-oQH"/>
             </connections>
-            <point key="canvasLocation" x="140.57971014492756" y="134.59821428571428"/>
+            <point key="canvasLocation" x="-171.01449275362319" y="132.58928571428572"/>
         </tableViewCell>
     </objects>
 </document>

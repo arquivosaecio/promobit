@@ -10,6 +10,7 @@ import UIKit
 class CentralListaContatosViewController: UtilAppDelegateViewController , UITableViewDelegate , UITableViewDataSource{
     
     var sortType = 0
+    var timer : AnyObject?
     
     @IBOutlet weak var menuSanduicheBarButtonItemOutlet: UIBarButtonItem!
     @IBOutlet weak var sadImageOutlet: UIImageView!
@@ -56,7 +57,9 @@ class CentralListaContatosViewController: UtilAppDelegateViewController , UITabl
         contatoTableView.delegate = self
         let cellXib = UINib(nibName: "ContatoTableViewCell", bundle: nil)
         contatoTableView.register(cellXib, forCellReuseIdentifier: "cell")
+        // Caso queira mover as linhas descomentar este bloco
         contatoTableView.isEditing = true
+        // Caso queira mover as linhas descomentar este bloco
         // Do any additional setup after loading the view.
     }
     
@@ -89,6 +92,7 @@ class CentralListaContatosViewController: UtilAppDelegateViewController , UITabl
                 contatoTableView.isHidden = true
             }
         }
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(verificarSeEparaEditarCadastro), userInfo: nil, repeats: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -98,36 +102,53 @@ class CentralListaContatosViewController: UtilAppDelegateViewController , UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = contatoTableView.dequeueReusableCell(withIdentifier: "cell") as! ContatoTableViewCell
         cell.fotoPerfilImageView.image = app.contatos[indexPath.row].fotoUIImage
-        cell.nomeLabel.text = app.contatos[indexPath.row].name
+        cell.nomeLabel.setTitle(app.contatos[indexPath.row].name, for: .normal)
         cell.companyLabel.text = app.contatos[indexPath.row].company
         cell.novoLabel.layer.masksToBounds = true
         cell.novoLabel.layer.cornerRadius = 12
+        cell.indexCelulaSelecionada = indexPath.row
+        cell.nomeLabel.addTarget(self, action: #selector(self.editarContato), for: .touchUpInside)
         if(app.contatos[indexPath.row].maisNovo == true){
             cell.novoLabel.isHidden = false
         }
         return cell
     }
 
-    
+    // Caso queira mover as linhas descomentar este bloco
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none
     }
-    
+
     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         return false
     }
-    
+
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let movedObject = self.app.contatos[sourceIndexPath.row]
         app.contatos.remove(at: sourceIndexPath.row)
         app.contatos.insert(movedObject, at: destinationIndexPath.row)
     }
+    // Caso queira mover as linhas descomentar este bloco
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         app.contatoIndex = indexPath.row
         let addRemoveContatoViewController = AddRemoveContatoViewController()
         app.window?.rootViewController = addRemoveContatoViewController
         app.window?.makeKeyAndVisible()
+    }
+    
+    @objc func editarContato(){
+        timer?.invalidate()
+        print("Clicou na main...")
+        let addRemoveContatoViewController = AddRemoveContatoViewController()
+        app.window?.rootViewController = addRemoveContatoViewController
+        app.window?.makeKeyAndVisible()
+    }
+    
+    @objc func verificarSeEparaEditarCadastro(){
+        if(app.contatoIndex != -1){
+            self.editarContato()
+        }
     }
 
 }

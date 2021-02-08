@@ -18,6 +18,7 @@
                 <outlet property="adicionarNotaTextField" destination="Kbb-My-K45" id="BZo-cK-0xB"/>
                 <outlet property="emailTextField" destination="7Rn-cf-bNl" id="9m0-98-x4x"/>
                 <outlet property="empresaTextField" destination="kbe-A6-IoU" id="yai-nU-N7Y"/>
+                <outlet property="excluirButtonOutlet" destination="0cy-lu-5wL" id="LQy-D1-zfB"/>
                 <outlet property="nomeSobrenomeTextField" destination="UfB-Yg-NoJ" id="LRg-IN-MIO"/>
                 <outlet property="siteTextField" destination="S5x-Lb-g83" id="zG4-dP-lPm"/>
                 <outlet property="telefoneJMMaskTextField" destination="vZM-GS-zqj" id="qY4-yi-B53"/>
@@ -250,7 +251,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vZM-GS-zqj" secondAttribute="trailing" constant="26" id="zWw-k2-ebf"/>
                 <constraint firstAttribute="trailing" secondItem="Kbb-My-K45" secondAttribute="trailing" constant="26" id="za1-iq-dp6"/>
             </constraints>
-            <point key="canvasLocation" x="-361" y="89"/>
+            <point key="canvasLocation" x="-884" y="84"/>
         </view>
     </objects>
     <designables>
